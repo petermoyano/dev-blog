@@ -9,7 +9,9 @@ const SinglePage: NextPage<Props> = () => {
   return <div>SinglePage</div>;
 };
 
-export const getStaticProps: GetStaticProps = () => {
+export const getStaticProps: GetStaticProps = (context) => {
+  const { params } = context;
+  const { postSlug } = params!;
   return { props: {} };
 };
 
